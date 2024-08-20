@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikanoppapeli</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Sikanoppapeli</h1>
+    <div class="dice">
+    <script>
+        
+        //preload the six images first
+        var face0=new Image()
+        face0.src="d1.gif"
+        var face1=new Image()
+        face1.src="d2.gif"
+        var face2=new Image()
+        face2.src="d3.gif"
+        var face3=new Image()
+        face3.src="d4.gif"
+        var face4=new Image()
+        face4.src="d5.gif"
+        var face5=new Image()
+        face5.src="d6.gif"
+        </script>
+    </div>
+        
+    <div class="container">
+        <div>
+            <label for="playerCount">Pelaajien lukumäärä:</label>
+            <input type="number" id="playerCount" value="2" min="2" max="5">
+            <button onclick="initializeGame()">Aloita peli</button>
+        </div>
+        <div id="playersContainer" class="players"></div>
+        <div class="dice">
+            <img id="diceImage" src="d1.gif" alt="Noppa">
+        </div>
+        <div class="controls">
+            <button id="rollBtn" onclick="rollDice()" disabled>Heitä Noppaa</button>
+            <button id="holdBtn" onclick="hold()" disabled>Pysäytä</button>
+        </div>
+        <div class="message" id="message"></div>
+    </div>
+        
+    <script src="script.js"></script>    
+</body>
+</html>
